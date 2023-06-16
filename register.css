@@ -1,0 +1,182 @@
+/* SCROLLING STYLES */
+
+::-webkit-scrollbar {
+  width: 10px;
+  padding: 0 2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 5px;
+}
+
+/* FONT */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form,
+label,
+input {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a:any-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* GENERAL STYLES */
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+/* FORM STYLES */
+
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container form {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 3rem;
+}
+
+.form-logo {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.form-logo svg {
+  width: 50px;
+  text-align: center;
+}
+
+.main-inputs {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+label {
+  position: relative;
+}
+
+.input-label {
+  color: grey;
+  position: absolute;
+  background-color: whitesmoke;
+  padding: 0 0.5rem;
+  transform: translateY(-60%) scale(0.9);
+}
+
+input {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0 0.5rem;
+  width: 280px;
+  height: 40px;
+  font-weight: 400;
+}
+
+.full-name {
+  text-transform: capitalize;
+}
+
+.password-option_link a:any-link {
+  color: black;
+  font-size: 0.9rem;
+  margin: 0.9rem 0;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.form-btn::after {
+  width: 30%;
+  height: 1px;
+  content: "";
+  position: absolute;
+  background-color: black;
+  bottom: 10px;
+}
+
+.form-btn button {
+  margin: 1.2rem;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 1rem;
+  height: 30px;
+  width: 110px;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-btn button::before {
+  transition: all 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 10px;
+  height: 110%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: skewX(-15deg);
+  opacity: 0;
+}
+
+.form-btn button:hover::before {
+  opacity: 1;
+}
+
+.password-option_link a:any-link {
+  color: black;
+  font-size: 0.9rem;
+  margin: 0.9rem 0;
+}
+
+.create-link a:any-link {
+  color: #333;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.create-link a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 378px) {
+  .form-container form {
+    border: none;
+    padding: 0 0.5rem;
+  }
+}
